@@ -20,8 +20,7 @@ var widthcount = function (str) {
     var ch = "";
     for (var i = 0; i < str.length; i++) {
       ch = str.substring(i, i + 1);
-      if ((ch.match(/^[^\x01-\x7E\xA1-\xDF]+$/))
-      　|| (ch.match(/^[\u2700-\uff65]+$/))){
+      if (ch.match(/^[\u2700-\uff65]+$/)){
           len += 2;
       }
       else {
@@ -37,8 +36,7 @@ var widthstring = function (str, count) {
     var ch = "";
     for (var i = 0; i < str.length; i++) {
       ch = str.substring(i, i + 1);
-      if ((ch.match(/^[^\x01-\x7E\xA1-\xDF]+$/))
-        　|| (ch.match(/^[\u2700-\uff65]+$/))){
+      if (ch.match(/^[\u2700-\uff65]+$/)){
            len += 2;
       }
       else{
